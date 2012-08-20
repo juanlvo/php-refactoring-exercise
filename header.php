@@ -34,6 +34,11 @@
       border-top: 1px solid #000;
       margin-top: 10px;
     }
+    
+    #footerBy{
+      padding: 5px;
+      margin-top: 10px;
+    }    
     </style>
   </head>
   

@@ -7,9 +7,6 @@ if(!$_GET['id'])
  die('Some error occured!!');
 }
 
-$db = @mysql_connect($database['host'], $database['username'], $database['password']) or die('Can\'t connect do database');
-@mysql_select_db($database['name']) or die('The database selected does not exists');
-
 if($_SERVER['REQUEST_METHOD'] == 'POST')
 {
   $errors = validate(array('id', 'firstname', 'lastname', 'phone'), $_POST);
@@ -66,3 +63,5 @@ mysql_close($db);
 <?php include_once('_form.php') ?>
 
 <?php include_once('footer.php') ?>
+
+<?php  closeConection($rs, $db); ?>

@@ -7,6 +7,7 @@
  * @param array $fields
  * @return array
  */
+
 function validate($mandatary_fields, $fields)
 {
   $errors = array();
@@ -27,4 +28,9 @@ function die_with_error($error_msg, $query)
   $message  = 'Invalid query: ' . $error_msg. "\n";
   $message .= 'Whole query: ' . $query;
   die($message);
+}
+
+function closeConection($rs, $db){
+        mysql_free_result($rs);
+    mysql_close($db);
 }
